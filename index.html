@@ -229,6 +229,237 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/PHP数组/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/08/PHP数组/" itemprop="url">PHP数组</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-08T08:48:50+08:00">
+                2019-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>创建数组</p>
+<pre><code>$arr = array()
+
+$arr = array(1,2,3,4,5)
+
+$arr = array(&apos;name&apos; =&gt; &apos;zs&apos;, &apos;age&apos; =&gt; 18)
+
+// 下边的方法，只有在php5.4之后才可以
+
+$arr = []
+
+$arr = [1, 2, 3, 4]
+
+$arr = [&apos;name&apos; =&gt; &apos;zs dskjfsd #$@HTUndsjn &quot;:&gt;?&lt;*((*&amp;&amp;**&amp;*&amp;**&apos;, &apos;age&apos; =&gt; 18]
+
+$arr = array(&apos;name&apos; =&gt; &apos;zs&apos;, 2, &apos;age&apos; =&gt; 18, 1)
+
+$a = &apos;123&apos;;
+$a[0] = 123; </code></pre><p>索引数组</p>
+<pre><code>赋值
+
+// 创建时直接赋值
+
+$arr = array(1,2,3,4,5)
+
+$arr = [1, 2, 3, 4]
+
+// 先创建数组
+
+$arr = array(1,2,3,4,5)
+
+$arr = array()
+
+$arr[0] = 123   // ==&gt;  [123, 2, 3, 4, 5]
+
+$arr[100] = 456  // ==&gt; [1, 2, 3, 4, 5,..., 456]
+
+取值
+
+// 通过下标取值
+
+$arr = array(1,2,3,4,5)
+
+echo $arr[4]
+
+// 通过循环遍历
+
+for($i = 0; $i &lt; 5; $i ++ ){    // 为什么从0开始，是因为数组中，下标是从0开始的
+    echo $arr[$i];
+}  
+
+for($i = 0; $i &lt; count($arr); $i ++ ){
+    echo $arr[$i];
+} 
+
+foreach($arr as $key =&gt; $value){
+    echo $key . &apos;&apos; . $value;
+}
+
+foreach($arr as $value){
+    echo $value;
+}</code></pre><p>关联数组</p>
+<pre><code>赋值
+
+$arr = array(&apos;name&apos; =&gt; &apos;zhangsan&apos;, &apos;age&apos; =&gt; 19);
+
+$arr = [&apos;name&apos; =&gt; &apos;zhangsan&apos;, &apos;age&apos; =&gt; 19];
+
+$arr = []
+
+$arr = array()
+
+$arr[&apos;name&apos;] = &apos;zs&apos;;    ==&gt;  [&apos;name&apos; =&gt; &apos;zs&apos;]
+
+
+
+
+取值   // 不能够通过下标取值
+
+$_GET[&apos;id&apos;]
+
+$_POST[&apos;uname&apos;]
+
+$arr[&apos;id&apos;]
+
+$arr[0] 
+
+foreach($arr as $key =&gt; $value){
+    echo $key . &apos;&apos; . $value;
+}
+
+foreach($arr as $value){
+    echo $value;
+}
+
+for遍历关联数组</code></pre><p>数组常用函数</p>
+<pre><code>array_keys( $arr  ) // 返回一个索引数组   包含所有数组的键
+
+array_values( $arr  ) // 返回一个索引数组  包含所有数组的值
+
+count()  sizeof()
+
+array_merge() // 合并数组   相当于 +
+
+array_key_exists() // 判断键是否存在
+
+sort() // 排序
+
+in_array()  // 判断元素是否在数组中
+
+array_unique() // 去重
+
+array_pop()  // 删除最后一个元素</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/06/20190806/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -371,7 +602,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/08/05/20190805/" itemprop="url">PHP基础语法</a></h1>
+                <a class="post-title-link" href="/2019/08/05/20190805/" itemprop="url">PHP 笔记</a></h1>
         
 
         <div class="post-meta">
@@ -423,7 +654,19 @@
       
         
           
-            
+            <p>php<br>cgi<br>module模式</p>
+<p>字符串 字符 定义变量 自变量<br>点 间隔 字符串</p>
+<p>crypt 加密函数<br>explode根据提供的字符，来切割字符串，结果是一个数据<br>strcmp 比较字符串，区分大小写，二进制安全，相同结果为0<br>&lt;?php<br>$a=123;<br>$b=456;<br>$c=$a+$b;<br>echo”{$a}+{$b}=$c”;<br>echo “<br>“;<br>var_dump(5==’5a’);<br>var_dump(‘5a’==5);</p>
+<p>$test = ‘菜鸟教程’;<br>// 普通写法<br>$username = isset($test) ? $test : ‘nobody’;<br>echo $username, PHP_EOL;</p>
+<p>// PHP 5.3+ 版本写法<br>$username = $test ?: ‘nobody’;<br>echo $username, PHP_EOL;</p>
+<p>echo “<br>“;<br>$x = “10”;<br>echo ++$x; // 输出11<br>echo “<br>“;<br>$y = 10;<br>echo $y++; // 输出10<br>echo “<br>“;<br>$z = 5;<br>echo –$z; // 输出4<br>echo “<br>“;<br>$i = 5;<br>echo $i–; // 输出5</p>
+<p>echo “<br>“;<br>$x = 10;<br>$y = 6;<br>echo $x + $y; // 输出16<br>echo ‘<br>‘;  // 换行<br>echo $x + 1;<br>echo ‘<br>‘;  // 换行<br>echo $x - $y; // 输出4<br>echo ‘<br>‘;  // 换行</p>
+<p>echo($x * $y); // 输出60<br>echo ‘<br>‘;  // 换行</p>
+<p>echo($x / $y); // 输出1.6666666666667<br>echo ‘<br>‘;  // 换行</p>
+<p>echo($x % $y); // 输出4<br>echo ‘<br>‘;  // 换行</p>
+<p>echo -$x;</p>
+<p>?&gt;</p>
+
           
         
       
@@ -504,7 +747,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

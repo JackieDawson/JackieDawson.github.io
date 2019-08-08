@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="805">
-<meta property="og:url" content="http://yoursite.com/805/index.html">
+<meta name="description" content="创建数组 $arr = array()  $arr = array(1,2,3,4,5)  $arr = array(&amp;apos;name&amp;apos; =&amp;gt; &amp;apos;zs&amp;apos;, &amp;apos;age&amp;apos; =&amp;gt; 18)  // 下边的方法，只有在php5.4之后才可以  $arr = []  $arr = [1, 2, 3, 4]  $arr = [&amp;apos;name">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP数组">
+<meta property="og:url" content="http://yoursite.com/2019/08/08/PHP数组/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="创建数组 $arr = array()  $arr = array(1,2,3,4,5)  $arr = array(&amp;apos;name&amp;apos; =&amp;gt; &amp;apos;zs&amp;apos;, &amp;apos;age&amp;apos; =&amp;gt; 18)  // 下边的方法，只有在php5.4之后才可以  $arr = []  $arr = [1, 2, 3, 4]  $arr = [&amp;apos;name">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T00:58:07.194Z">
+<meta property="og:updated_time" content="2019-08-08T00:48:54.401Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="805">
+<meta name="twitter:title" content="PHP数组">
+<meta name="twitter:description" content="创建数组 $arr = array()  $arr = array(1,2,3,4,5)  $arr = array(&amp;apos;name&amp;apos; =&amp;gt; &amp;apos;zs&amp;apos;, &amp;apos;age&amp;apos; =&amp;gt; 18)  // 下边的方法，只有在php5.4之后才可以  $arr = []  $arr = [1, 2, 3, 4]  $arr = [&amp;apos;name">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/805/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/08/PHP数组/">
 
 
 
 
 
-  <title>805 | Hexo</title>
+  <title>PHP数组 | Hexo</title>
   
 
 
@@ -217,33 +220,249 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/PHP数组/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">805</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">PHP数组</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-08T08:48:50+08:00">
+                2019-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>创建数组</p>
+<pre><code>$arr = array()
+
+$arr = array(1,2,3,4,5)
+
+$arr = array(&apos;name&apos; =&gt; &apos;zs&apos;, &apos;age&apos; =&gt; 18)
+
+// 下边的方法，只有在php5.4之后才可以
+
+$arr = []
+
+$arr = [1, 2, 3, 4]
+
+$arr = [&apos;name&apos; =&gt; &apos;zs dskjfsd #$@HTUndsjn &quot;:&gt;?&lt;*((*&amp;&amp;**&amp;*&amp;**&apos;, &apos;age&apos; =&gt; 18]
+
+$arr = array(&apos;name&apos; =&gt; &apos;zs&apos;, 2, &apos;age&apos; =&gt; 18, 1)
+
+$a = &apos;123&apos;;
+$a[0] = 123; </code></pre><p>索引数组</p>
+<pre><code>赋值
+
+// 创建时直接赋值
+
+$arr = array(1,2,3,4,5)
+
+$arr = [1, 2, 3, 4]
+
+// 先创建数组
+
+$arr = array(1,2,3,4,5)
+
+$arr = array()
+
+$arr[0] = 123   // ==&gt;  [123, 2, 3, 4, 5]
+
+$arr[100] = 456  // ==&gt; [1, 2, 3, 4, 5,..., 456]
+
+取值
+
+// 通过下标取值
+
+$arr = array(1,2,3,4,5)
+
+echo $arr[4]
+
+// 通过循环遍历
+
+for($i = 0; $i &lt; 5; $i ++ ){    // 为什么从0开始，是因为数组中，下标是从0开始的
+    echo $arr[$i];
+}  
+
+for($i = 0; $i &lt; count($arr); $i ++ ){
+    echo $arr[$i];
+} 
+
+foreach($arr as $key =&gt; $value){
+    echo $key . &apos;&apos; . $value;
+}
+
+foreach($arr as $value){
+    echo $value;
+}</code></pre><p>关联数组</p>
+<pre><code>赋值
+
+$arr = array(&apos;name&apos; =&gt; &apos;zhangsan&apos;, &apos;age&apos; =&gt; 19);
+
+$arr = [&apos;name&apos; =&gt; &apos;zhangsan&apos;, &apos;age&apos; =&gt; 19];
+
+$arr = []
+
+$arr = array()
+
+$arr[&apos;name&apos;] = &apos;zs&apos;;    ==&gt;  [&apos;name&apos; =&gt; &apos;zs&apos;]
+
+
+
+
+取值   // 不能够通过下标取值
+
+$_GET[&apos;id&apos;]
+
+$_POST[&apos;uname&apos;]
+
+$arr[&apos;id&apos;]
+
+$arr[0] 
+
+foreach($arr as $key =&gt; $value){
+    echo $key . &apos;&apos; . $value;
+}
+
+foreach($arr as $value){
+    echo $value;
+}
+
+for遍历关联数组</code></pre><p>数组常用函数</p>
+<pre><code>array_keys( $arr  ) // 返回一个索引数组   包含所有数组的键
+
+array_values( $arr  ) // 返回一个索引数组  包含所有数组的值
+
+count()  sizeof()
+
+array_merge() // 合并数组   相当于 +
+
+array_key_exists() // 判断键是否存在
+
+sort() // 排序
+
+in_array()  // 判断元素是否在数组中
+
+array_unique() // 去重
+
+array_pop()  // 删除最后一个元素</code></pre>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/06/20190806/" rel="next" title="五角星">
+                <i class="fa fa-chevron-left"></i> 五角星
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
