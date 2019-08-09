@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="ZLH">
 <meta property="og:description" content="form action=”add_news.php” method=”post”&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T00:50:27.251Z">
+<meta property="og:updated_time" content="2019-08-09T01:17:16.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="输入新闻 注册用户">
 <meta name="twitter:description" content="form action=”add_news.php” method=”post”&amp;gt;">
@@ -302,10 +302,10 @@
         <p>form action=”add_news.php” method=”post”&gt;</p>
 <a id="more"></a>
 <p>p&gt;标题</p><br>          input type=”text” name=”title” placeholder=”输入新闻标题”&gt;<br>        p&gt;内容<p></p><br>          textarea name=”content” placeholder=”输入新闻标题”&gt;<br>        p&gt;作者<p></p><br>          input type=”text” name=”author” placeholder=”输入新闻作者”&gt;<br>        p&gt;预览图<p></p><br>          input type=”text” name=”title” placeholder=”输入新闻预览图地址”&gt;<br>          br&gt;<br>          input type=”submit” value=”提交”&gt;<br>    /form&gt;<br>注册用<p></p>
-<p>&lt;?php<br>$uname=base64_encode($_POST[‘uname’]);<br>$upass=md5($_POST[‘upass’]);<br>$umail=base64_encode($_POST[‘umail’]);<br>$img_url=base64_encode($_POST[‘img_url’]);</p>
-<p>if($uname&amp;&amp;$upass&amp;&amp;$umail&amp;&amp;$img_url){<br>    $data=time();<br>    $data=”1||{$uname}||{$upass}||{$umail}||{$img_url}\n”;<br>    $f=fopen(‘data/users.db’,’a’);<br>    fwrite($f,$data);<br>    fclose($f);<br>    echo”<script>alert('注册成功zhucechenggong!');location.href='login.html';</script>“;</p>
+<p>php<br>$uname=base64_encode($_POST[‘uname’]);<br>$upass=md5($_POST[‘upass’]);<br>$umail=base64_encode($_POST[‘umail’]);<br>$img_url=base64_encode($_POST[‘img_url’]);</p>
+<p>if($uname&amp;&amp;$upass&amp;&amp;$umail&amp;&amp;$img_url){<br>    $data=time();<br>    $data=”1||{$uname}||{$upass}||{$umail}||{$img_url}\n”;<br>    $f=fopen(‘data/users.db’,’a’);<br>    fwrite($f,$data);<br>    fclose($f);<br>    echo”script&gt;alert(‘注册成功zhucechenggong!’);location.href=’login.html’;“;</p>
 <p>}</p>
-<p>&lt;?php<br>$uname = base64_encode($_POST[‘uname’]);<br>if($uname&amp;&amp;$upass){<br>    $f=fopen(‘data/users.db’,’r’);<br>    while (!feof($f)){<br>        $data=fgets($f);<br>        $arr=explode(‘||’,$data);<br>        if(count($arr)!=7){<br>            continue;<br>        }<br>        if($arr[1]==$uname&amp;&amp;$arr[2]==$upass){<br>            echo “<script>alert"<br>        }<br>    }<br>}</p>
+<p>$uname = base64_encode($_POST[‘uname’]);<br>if($uname&amp;&amp;$upass){<br>    $f=fopen(‘data/users.db’,’r’);<br>    while (!feof($f)){<br>        $data=fgets($f);<br>        $arr=explode(‘||’,$data);<br>        if(count($arr)!=7){<br>            continue；<br>        if($arr[1]==$uname&amp;&amp;$arr[2]==$upass){<br>            echo “<script>alert"</p>
 </script></p>
       
     </div>
