@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="for ( $i1 = 1; $i1 &amp;lt; 6; $i1++ ){    for ( $j1 = 1; $j1 &amp;lt; 19 - $i1; $j1++ )        printf( “ “ );    for ( $k1 = 1; $k1 &amp;lt;= 2 * $i1 - 1; $k1++ )        printf( “*” );    printf( “\n” );}">
+<meta name="description" content="php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="五角星">
-<meta property="og:url" content="http://yoursite.com/2019/08/07/20190806/index.html">
+<meta property="og:title" content="PHP 笔记">
+<meta property="og:url" content="http://yoursite.com/2019/08/10/20190805/index.html">
 <meta property="og:site_name" content="ZLH">
-<meta property="og:description" content="for ( $i1 = 1; $i1 &amp;lt; 6; $i1++ ){    for ( $j1 = 1; $j1 &amp;lt; 19 - $i1; $j1++ )        printf( “ “ );    for ( $k1 = 1; $k1 &amp;lt;= 2 * $i1 - 1; $k1++ )        printf( “*” );    printf( “\n” );}">
+<meta property="og:description" content="php">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T00:30:03.980Z">
+<meta property="og:updated_time" content="2019-08-11T15:39:01.490Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="五角星">
-<meta name="twitter:description" content="for ( $i1 = 1; $i1 &amp;lt; 6; $i1++ ){    for ( $j1 = 1; $j1 &amp;lt; 19 - $i1; $j1++ )        printf( “ “ );    for ( $k1 = 1; $k1 &amp;lt;= 2 * $i1 - 1; $k1++ )        printf( “*” );    printf( “\n” );}">
+<meta name="twitter:title" content="PHP 笔记">
+<meta name="twitter:description" content="php">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/07/20190806/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/10/20190805/">
 
 
 
 
 
-  <title>五角星 | ZLH</title>
+  <title>PHP 笔记 | ZLH</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/07/20190806/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/10/20190805/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">五角星</h1>
+          <h1 class="post-title" itemprop="name headline">PHP 笔记</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-07T08:49:00+08:00">
-                2019-08-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-10T00:00:00+08:00">
+                2019-08-10
               </time>
             
 
@@ -299,12 +299,47 @@
       
 
       
-        <p>for ( $i1 = 1; $i1 &lt; 6; $i1++ )<br>{<br>    for ( $j1 = 1; $j1 &lt; 19 - $i1; $j1++ )<br>        printf( “ “ );<br>    for ( $k1 = 1; $k1 &lt;= 2 * $i1 - 1; $k1++ )<br>        printf( “*” );<br>    printf( “\n” );<br>}</p>
+        <p>php</p>
 <a id="more"></a>
 
-<p>for ($i2 = 1; $i2 &lt; 5; $i2++ )<br>{<br>    for ( $j2 = 1; $j2 &lt; 3 * $i2 - 3; $j2++ )<br>        printf( “ “ );<br>    for ( $k2 = 1; $k2 &lt;= 42 - 6 * $i2; $k2++ )<br>        printf( “*” );<br>    printf( “\n” );<br>}</p>
-<p>for ( $i3 = 1; $i3 &lt; 3; $i3++ )<br>{<br>    for ( $j3 = 1; $j3 &lt; 12 - $i3; $j3++ )<br>        printf( “ “ );<br>    for ( $k3 = 1; $k3 &lt;= 12 + 2 * $i3; $k3++ )<br>        printf( “*” );<br>    printf( “\n” );<br>}</p>
-<p>for ( $i4 = 1; $i4 &lt; 5; $i4++ )<br>{<br>    for ( $j4 = 1; $j4 &lt; 10 - $i4; $j4++ )<br>        printf( “ “ );<br>    for ( $k4 = 1; $k4 &lt;= 10 - 2 * $i4; $k4++ )<br>        printf( “*” );<br>    for ( $m4 = 1; $m4 &lt; 6 * $i4 - 3; $m4++ )<br>        printf( “ “ );<br>    for ( $n4 = 1; $n4 &lt;= 10 - 2 * $i4; $n4++ )<br>        printf( “*” );<br>    printf( “\n” );<br>}</p>
+<p>基础 PHP 语法<br>PHP 脚本可放置于文档中的任何位置。</p>
+<p>PHP 脚本以 <?php 开头，以 ?> 结尾：</p>
+<?php
+?>
+
+<p>PHP 文件的默认文件扩展名是 “.php”。<br>PHP 文件通常包含 HTML 标签以及一些 PHP 脚本代码。<br>PHP 大小写敏感<br>在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。<br>PHP 变量<br>PHP 变量可用于保存值（x=5）和表达式（z=x+y）。</p>
+<p>变量的名称可以很短x,y;也可以取更具描述性的名称</p>
+<p>PHP 变量规则：<br>变量以 $ 符号开头，其后是变量的名称<br>变量名称必须以字母或下划线开头<br>变量名称不能以数字开头<br>变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）<br>变量名称对大小写敏感（$y 与 $Y 是两个不同的变量）<br>注释：PHP 变量名称对大小写敏感！</p>
+<p>创建 PHP 变量<br>PHP 没有创建变量的命令。<br>变量会在首次为其赋值时被创建</p>
+<p>PHP echo 和 print 语句<br>echo 和 print 之间的差异：</p>
+<p>echo - 能够输出一个以上的字符串<br>print - 只能输出一个字符串，并始终返回 1<br>提示：echo 比 print 稍快，因为它不返回任何值。</p>
+<p>PHP echo 语句<br>echo 是一个语言结构，有无括号均可使用：echo 或 echo()。<br> var_dump() 会返回变量的数据类型和值：<br>PHP 字符串<br>字符串是字符序列，比如 “Hello world!”。</p>
+<p>字符串可以是引号内的任何文本</p>
+<p>PHP 整数<br>整数是没有小数的数字。</p>
+<p>整数规则：</p>
+<p>整数必须有至少一个数字（0-9）<br>整数不能包含逗号或空格<br>整数不能有小数点<br>整数正负均可<br>可以用三种格式规定整数：十进制、十六进制（前缀是 0x）或八进制（前缀是 0）</p>
+<p>PHP 逻辑<br>逻辑是 true 或 false。逻辑常用于条件测试</p>
+<p>PHP 常量<br>常量是单个值的标识符（名称）。在脚本中无法改变该值。</p>
+<p>有效的常量名以字符或下划线开头（常量名称前面没有 $ 符号）</p>
+<p>设置 PHP 常量<br>如需设置常量，请使用 define() 函数 - 它使用三个参数：</p>
+<p>首个参数定义常量的名称<br>第二个参数定义常量的值<br>可选的第三个参数规定常量名是否对大小写不敏感。默认是 false</p>
+<p>PHP 递增/递减运算符<br>++$x    前递增    $x 加一递增，然后返回 $x<br>$x++    后递增    返回 $x，然后 $x 加一递增</p>
+<p>PHP 比较运算符<br>==    等于    $x == $y    如果 $x 等于 $y，则返回 true。<br>===    全等（完全相同）    $x === $y    如果 $x 等于 $y，且它们类型相同，则返回 true。<br>!=     不等于    $x != $y    如果 $x 不等于 $y，则返回 true。</p>
+<p>PHP 逻辑运算符</p>
+<p>and    与    $x and $y    如果 $x 和 $y 都为 true，则返回 true。<br>or    或    $x or $y    如果 $x 和 $y 至少有一个为 true，则返回 true<br>xor    异或    $x xor $y    如果 $x 和 $y 有且仅有一个为 true，则返回 true<br>&amp;&amp;    与    $x &amp;&amp; $y    如果 $x 和 $y 都为 true，则返回 true<br>||    或    $x || $y    如果 $x 和 $y 至少有一个为 true，则返回 true。<br>!    非    !$x    如果 $x 不为 true，则返回 true<br>PHP 条件语句</p>
+<p>if 语句 - 如果指定条件为真，则执行代码<br>if…else 语句 - 如果条件为 true，则执行代码；如果条件为 false，则执行另一端代码<br>if…elseif….else 语句 - 根据两个以上的条件执行不同的代码块<br>switch 语句 - 选择多个代码块之一来执行</p>
+<p>PHP while 循环<br>while - 只要指定条件为真，则循环代码块<br>do…while - 先执行一次代码块，然后只要指定条件为真则重复循环<br>for - 循环代码块指定次数<br>foreach - 遍历数组中的每个元素并循环代码块<br>只要指定的条件为真，while 循环就会执行代码块。<br>while (条件为真) {<br>  要执行的代码;<br>}<br>PHP for 循环<br>如果提前确定脚本运行的次数，可以使用 for 循环。<br>PHP foreach 循环<br>foreach 循环只适用于数组，并用于遍历数组中的每个键/值对。</p>
+<p>字符串 字符 定义变量 自变量<br>点 间隔 字符串</p>
+<p>crypt 加密函数<br>explode根据提供的字符，来切割字符串，结果是一个数据<br>strcmp 比较字符串，区分大小写，二进制安全，相同结果为0<br>&lt;?php<br>$a=123;<br>$b=456;<br>$c=$a+$b;<br>echo”{$a}+{$b}=$c”;<br>echo “<br>“;<br>var_dump(5==’5a’);<br>var_dump(‘5a’==5);</p>
+<p>$test = ‘菜鸟教程’;<br>// 普通写法<br>$username = isset($test) ? $test : ‘nobody’;<br>echo $username, PHP_EOL;</p>
+<p>// PHP 5.3+ 版本写法<br>$username = $test ?: ‘nobody’;<br>echo $username, PHP_EOL;</p>
+<p>echo “<br>“;<br>$x = “10”;<br>echo ++$x; // 输出11<br>echo “<br>“;<br>$y = 10;<br>echo $y++; // 输出10<br>echo “<br>“;<br>$z = 5;<br>echo –$z; // 输出4<br>echo “<br>“;<br>$i = 5;<br>echo $i–; // 输出5</p>
+<p>echo “<br>“;<br>$x = 10;<br>$y = 6;<br>echo $x + $y; // 输出16<br>echo ‘<br>‘;  // 换行<br>echo $x + 1;<br>echo ‘<br>‘;  // 换行<br>echo $x - $y; // 输出4<br>echo ‘<br>‘;  // 换行</p>
+<p>echo($x * $y); // 输出60<br>echo ‘<br>‘;  // 换行</p>
+<p>echo($x / $y); // 输出1.6666666666667<br>echo ‘<br>‘;  // 换行</p>
+<p>echo($x % $y); // 输出4<br>echo ‘<br>‘;  // 换行</p>
+<p>echo -$x;</p>
+<p>?&gt;</p>
 
       
     </div>
@@ -329,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/06/水仙花数/" rel="next" title="水仙花数">
-                <i class="fa fa-chevron-left"></i> 水仙花数
+              <a href="/2019/08/09/输入新闻-注册用户/" rel="next" title="输入新闻 注册用户">
+                <i class="fa fa-chevron-left"></i> 输入新闻 注册用户
               </a>
             
           </div>
@@ -339,8 +374,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/08/PHP数组/" rel="prev" title="PHP数组">
-                PHP数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/11/810/" rel="prev" title="810">
+                810 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
