@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="http：http的中文叫做超文本传输协议,它负责完成客户端到服务端的一系列操作,是专门用来传输注入HTML的超媒体文档等web内容的协议,它是基于传输层的TCP协议的应用层协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http基础">
+<meta property="og:url" content="http://yoursite.com/2019/08/21/http基础/index.html">
+<meta property="og:site_name" content="ZLH">
+<meta property="og:description" content="http：http的中文叫做超文本传输协议,它负责完成客户端到服务端的一系列操作,是专门用来传输注入HTML的超媒体文档等web内容的协议,它是基于传输层的TCP协议的应用层协议">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-21T00:54:01.545Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="http基础">
+<meta name="twitter:description" content="http：http的中文叫做超文本传输协议,它负责完成客户端到服务端的一系列操作,是专门用来传输注入HTML的超媒体文档等web内容的协议,它是基于传输层的TCP协议的应用层协议">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/21/http基础/">
+
+
+
+
+
+  <title>http基础 | ZLH</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ZLH</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/http基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZLH">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">http基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-21T08:52:51+08:00">
+                2019-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>http：http的中文叫做超文本传输协议,它负责完成客户端到服务端的一系列操作,是专门用来传输注入HTML的超媒体文档等web内容的协议,它是基于传输层的TCP协议的应用层协议</p>
+<a id="more"></a>
+<p>https:https是基于安全套接字的http协议,也可以理解为是http+ssl/tls(数字证书)的组合</p>
+<p>HTTP 的 URL 以 http:// 开头，而 HTTPS 的 URL 以 https:// 开头<br>HTTP 是不安全的，而 HTTPS 是安全的<br>HTTP 标准端口是 80 ，而 HTTPS 的标准端口是 443<br>在 OSI 网络模型中，HTTPS的加密是在传输层完成的,因为SSL是位于传输层的,TLS的前身是SSL,所以同理<br>HTTP无需认证证书,而https需要认证证书</p>
+<p>HTTP特点</p>
+<p>1.支持客户/服务器模式。（C/S模式）</p>
+<p>2.简单快速：客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</p>
+<p>3.灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。</p>
+<p>4.无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</p>
+<p>5.无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快</p>
+<p>HTTP工作流程</p>
+<p>第一步：建立TCP/IP连接，客户端与服务器通过Socket三次握手进行连接</p>
+<p>第二步：客户端向服务端发起HTTP请求（例如：POST/login.html http/1.1）</p>
+<p>第三步：客户端发送请求头信息，请求内容，最后会发送一空白行，标示客户端请求完毕</p>
+<p>第四步：服务器做出应答，表示对于客户端请求的应答，例如：HTTP/1.1 200 OK</p>
+<p>第五步：服务器向客户端发送应答头信息</p>
+<p>第六步：服务器向客户端发送请求头信息后，也会发送一空白行，标示应答头信息发送完毕，接着就以Content-type要求的数据格式发送数据给客户端</p>
+<p>第七步：服务端关闭TCP连接，如果服务器或者客户端增Connection:keep-alive就表示客户端与服务器端继续保存连接，在下次请求时可以继续使用这次的连接</p>
+<p>HTTPS特点</p>
+<p>HTTPS是HTTP协议的修改，它加密数据并确保其机密性。其配置可保护用户在与网站交互时免于窃取个人信息和计费数据。</p>
+<p>1、优点</p>
+<p>相比于http，https可以提供更加优质保密的信息，保证了用户数据的安全性，此外https同时也一定程度上保护了服务端，使用恶意攻击和伪装数据的成本大大提高。</p>
+<p>2、缺点</p>
+<p>缺点也同样很明显，第一https的技术门槛较高，多数个人或者私人网站难以支撑，CA机构颁发的证书都是需要年费的，此外对接Https协议也需要额外的技术支持；其二，目前来说大多数网站并不关心数据的安全性和保密性，其https最大的优点对它来说并不适用；其三，https加重了服务端的负担，相比于http其需要更多的资源来支撑，同时也降低了用户的访问速度；第四，目前来说Http网站仍然大规模使用，在浏览器侧也没有特别大的差别，很多用户不关心的话根本不感知。</p>
+<p>HTTPS工作流程</p>
+<p>第一步：客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。</p>
+<p>第二步：Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。</p>
+<p>第三步：客户端的浏览器与Web服务器开始协商SSL连接的安全等级，也就是信息加密的等级。</p>
+<p>第四步：客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。</p>
+<p>第五步：Web服务器利用自己的私钥解密出会话密钥。</p>
+<p>第六步：Web服务器利用会话密钥加密与客户端之间的通信。</p>
+<p>HTTP 常见头部字段信息 </p>
+<p>一、响应码<br>HTTP响应码响应码由三位十进制数字组成，它们出现在由HTTP服务器发送的响应的第一行。<br>响应码分五种类型，由它们的第一位数字表示：<br>1xx：信息，请求收到，继续处理<br>2xx：成功，行为被成功地接受、理解和采纳<br>3xx：重定向，为了完成请求，必须进一步执行的动作<br>4xx：客户端错误，请求包含语法错误或者请求无法实现<br>5xx：服务器错误，服务器不能实现一种明显无效的请求<br>100 继续  101 分组交换协<br>200 OK  201 被创建  202 被采纳  203 非授权信息  204 无内容  205 重置内容  206 部分内容<br>300 多选项 301 永久地传送 302 找到 303 参见其他 304 未改动 305 使用代理 307 暂时重定向<br>400 错误请求 401 未授权 402 要求付费 403 禁止 404 未找到 405 不允许的方法 406 不被采纳 407 要求代理授权 408 请求超时 409 冲突 410 过期的 411 要求的长度 412 前提不成立 413 请求实例太大 414 请求URI太大 415 不支持的媒体类型 416 无法满足的请求范围 417 失败的预期 500 内部服务器错误 501 未被使用 502 网关错误 503 不可用的服务 504 网关超时 505 HTTP版本未被支持</p>
+<p>二、HTTP头标<br>头标由主键/值对组成。它们描述客户端或者服务器的属性、被传输的资源以及应该实现连接。<br>四种不同类型的头标：<br>1.通用头标：即可用于请求，也可用于响应，是作为一个整体而不是特定资源与事务相关联。<br>2.请求头标：允许客户端传递关于自身的信息和希望的响应形式。<br>3.响应头标：服务器和于传递自身信息的响应。<br>4.实体头标：定义被传送资源的信息。即可用于请求，也可用于响应。<br>头标格式：<name>:<value><crlf>  </crlf></value></name></p>
+<ol>
+<li><p>Accept：告诉WEB服务器自己接受什么介质类型，<em>/</em> 表示任何类型，type/* 表示该类型下的所有子类型，type/sub-type。 </p>
+</li>
+<li><p>Accept-Charset： 浏览器申明自己接收的字符集<br>Accept-Encoding： 浏览器申明自己接收的编码方法，通常指定压缩方法，是否支持压缩，支持什么压缩方法 （gzip，deflate）<br>Accept-Language：：浏览器申明自己接收的语言语言跟字符集的区别：中文是语言，中文有多种字符集，比如big5，gb2312，gbk等等。 </p>
+</li>
+<li><p>Accept-Ranges：WEB服务器表明自己是否接受获取其某个实体的一部分（比如文件的一部分）的请求。bytes：表示接受，none：表示不接受。 </p>
+</li>
+<li><p>Age：当代理服务器用自己缓存的实体去响应请求时，用该头部表明该实体从产生到现在经过多长时间了。 </p>
+</li>
+<li><p>Authorization：当客户端接收到来自WEB服务器的 WWW-Authenticate 响应时，该头部来回应自己的身份验证信息给WEB服务器。 </p>
+</li>
+<li><p>Cache-Control：请求：no-cache（不要缓存的实体，要求现在从WEB服务器去取）<br>max-age：（只接受 Age 值小于 max-age 值，并且没有过期的对象）<br>max-stale：（可以接受过去的对象，但是过期时间必须小于<br>max-stale 值）<br>min-fresh：（接受其新鲜生命期大于其当前 Age 跟 min-fresh 值之和的<br>缓存对象）<br>响应：public(可以用 Cached 内容回应任何用户)<br>private（只能用缓存内容回应先前请求该内容的那个用户）<br>no-cache（可以缓存，但是只有在跟WEB服务器验证了其有效后，才能返回给客户端）<br>max-age：（本响应包含的对象的过期时间）<br>ALL: no-store（不允许缓存） </p>
+</li>
+<li><p>Connection：请求：close（告诉WEB服务器或者代理服务器，在完成本次请求的响应<br>后，断开连接，不要等待本次连接的后续请求了）。<br>keepalive（告诉WEB服务器或者代理服务器，在完成本次请求的<br>响应后，保持连接，等待本次连接的后续请求）。<br>响应：close（连接已经关闭）。<br>keepalive（连接保持着，在等待本次连接的后续请求）。<br>Keep-Alive：如果浏览器请求保持连接，则该头部表明希望 WEB 服务器保持<br>连接多长时间（秒）。<br>例如：Keep-Alive：300 </p>
+</li>
+<li><p>Content-Encoding：WEB服务器表明自己使用了什么压缩方法（gzip，deflate）压缩响应中的对象。<br>例如：Content-Encoding：gzip<br>Content-Language：WEB 服务器告诉浏览器自己响应的对象的语言。<br>Content-Length： WEB 服务器告诉浏览器自己响应的对象的长度。<br>例如：Content-Length: 26012<br>Content-Range： WEB 服务器表明该响应包含的部分对象为整个对象的哪个部分。<br>例如：Content-Range: bytes 21010-47021/47022<br>Content-Type： WEB 服务器告诉浏览器自己响应的对象的类型。<br>例如：Content-Type：application/xml </p>
+</li>
+<li><p>ETag：就是一个对象（比如URL）的标志值，就一个对象而言，比如一个 html 文件，<br>如果被修改了，其 Etag 也会别修改， 所以，ETag 的作用跟 Last-Modified 的<br>作用差不多，主要供 WEB 服务器 判断一个对象是否改变了。<br>比如前一次请求某个 html 文件时，获得了其 ETag，当这次又请求这个文件时，<br>浏览器就会把先前获得的 ETag 值发送给 WEB 服务器，然后 WEB 服务器<br>会把这个 ETag 跟该文件的当前 ETag 进行对比，然后就知道这个文件<br>有没有改变了。 </p>
+</li>
+<li><p>Expired：WEB服务器表明该实体将在什么时候过期，对于过期了的对象，只有在<br>跟WEB服务器验证了其有效性后，才能用来响应客户请求。<br>是 HTTP/1.0 的头部。<br>例如：Expires：Sat, 23 May 2009 10:02:12 GMT </p>
+</li>
+<li><p>Host：客户端指定自己想访问的WEB服务器的域名/IP 地址和端口号。<br>例如：Host：rss.sina.com.cn </p>
+</li>
+<li><p>If-Match：如果对象的 ETag 没有改变，其实也就意味著对象没有改变，才执行请求的动作。<br>If-None-Match：如果对象的 ETag 改变了，其实也就意味著对象也改变了，才执行请求的动作。 </p>
+</li>
+<li><p>If-Modified-Since：如果请求的对象在该头部指定的时间之后修改了，才执行请求<br>的动作（比如返回对象），否则返回代码304，告诉浏览器该对象<br>没有修改。<br>例如：If-Modified-Since：Thu, 10 Apr 2008 09:14:42 GMT<br>If-Unmodified-Since：如果请求的对象在该头部指定的时间之后没修改过，才执行<br>请求的动作（比如返回对象）。 </p>
+</li>
+<li><p>If-Range：浏览器告诉 WEB 服务器，如果我请求的对象没有改变，就把我缺少的部分<br>给我，如果对象改变了，就把整个对象给我。 浏览器通过发送请求对象的<br>ETag 或者 自己所知道的最后修改时间给 WEB 服务器，让其判断对象是否<br>改变了。<br>总是跟 Range 头部一起使用。 </p>
+</li>
+<li><p>Last-Modified：WEB 服务器认为对象的最后修改时间，比如文件的最后修改时间，<br>动态页面的最后产生时间等等。<br>例如：Last-Modified：Tue, 06 May 2008 02:42:43 GMT </p>
+</li>
+<li><p>Location：WEB 服务器告诉浏览器，试图访问的对象已经被移到别的位置了，<br>到该头部指定的位置去取。<br>例如：Location：<br><a href="http://i0.sinaimg.cn/dy/deco/2008/0528/sinahome_0803_ws_005_text_0.gif" target="_blank" rel="noopener">http://i0.sinaimg.cn/dy/deco/2008/0528/sinahome_0803_ws_005_text_0.gif</a> </p>
+</li>
+<li><p>Pramga：主要使用 Pramga: no-cache，相当于 Cache-Control： no-cache。<br>例如：Pragma：no-cache </p>
+</li>
+<li><p>Proxy-Authenticate： 代理服务器响应浏览器，要求其提供代理身份验证信息。<br>Proxy-Authorization：浏览器响应代理服务器的身份验证请求，提供自己的身份信息。 </p>
+</li>
+<li><p>Range：浏览器（比如 Flashget 多线程下载时）告诉 WEB 服务器自己想取对象的哪部分。<br>例如：Range: bytes=1173546- </p>
+</li>
+<li><p>Referer：浏览器向 WEB 服务器表明自己是从哪个 网页/URL 获得/点击 当前请求中的网址/URL。<br>例如：Referer：<a href="http://www.sina.com/" target="_blank" rel="noopener">http://www.sina.com/</a> </p>
+</li>
+<li><p>Server: WEB 服务器表明自己是什么软件及版本等信息。<br>例如：Server：Apache/2.0.61 (Unix) </p>
+</li>
+<li><p>User-Agent: 浏览器表明自己的身份（是哪种浏览器）。<br>例如：User-Agent：Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN;<br>rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14 </p>
+</li>
+<li><p>Transfer-Encoding: WEB 服务器表明自己对本响应消息体（不是消息体里面的对象）<br>作了怎样的编码，比如是否分块（chunked）。<br>例如：Transfer-Encoding: chunked </p>
+</li>
+<li><p>Vary: WEB服务器用该头部的内容告诉 Cache 服务器，在什么条件下才能用本响应<br>所返回的对象响应后续的请求。<br>假如源WEB服务器在接到第一个请求消息时，其响应消息的头部为：<br>Content-Encoding: gzip; Vary: Content-Encoding 那么 Cache 服务器会分析后续<br>请求消息的头部，检查其 Accept-Encoding，是否跟先前响应的 Vary 头部值<br>一致，即是否使用相同的内容编码方法，这样就可以防止 Cache 服务器用自己<br>Cache 里面压缩后的实体响应给不具备解压能力的浏览器。<br>例如：Vary：Accept-Encoding </p>
+</li>
+<li><p>Via： 列出从客户端到 OCS 或者相反方向的响应经过了哪些代理服务器，他们用<br>什么协议（和版本）发送的请求。<br>当客户端请求到达第一个代理服务器时，该服务器会在自己发出的请求里面<br>添加 Via 头部，并填上自己的相关信息，当下一个代理服务器 收到第一个代理<br>服务器的请求时，会在自己发出的请求里面复制前一个代理服务器的请求的Via<br>头部，并把自己的相关信息加到后面， 以此类推，当 OCS 收到最后一个代理服<br>务器的请求时，检查 Via 头部，就知道该请求所经过的路由。</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/14/php-connet-mysql/" rel="next" title="php connet mysql">
+                <i class="fa fa-chevron-left"></i> php connet mysql
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
